@@ -1,0 +1,8 @@
+This is a record of the differences, and mainly problems, I faced while porting SFML2 to VxWorks 6.3 for FRC
+- Tyler Veness, 2013 software Lead, FRC Team 3512
+
+WindRiver VxWorks doesn't support PTHREAD_MUTEX_RECURSIVE and other types
+	therefore doesn't support all of POSIX threads	
+doesn't support wchar and wcslen among other wide character functions
+
+had type conversion issues in sf::Socket and similar classes (wrong headers included?) b/c typedef from socketlen_t to int wasn't working
