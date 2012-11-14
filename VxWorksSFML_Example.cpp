@@ -1,6 +1,6 @@
-#include "../SFML/Network/IpAddress.hpp"
-#include "../SFML/Network/Packet.hpp"
-#include "../SFML/Network/UdpSocket.hpp"
+#include "SFML/Network/IpAddress.hpp"
+#include "SFML/Network/Packet.hpp"
+#include "SFML/Network/UdpSocket.hpp"
 
 int main() {
 	sf::UdpSocket serverSocket;

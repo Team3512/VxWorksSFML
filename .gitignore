@@ -1,0 +1,7 @@
+*.log
+*.a
+*.dll
+*.d
+*.o
+*.out
+ctdt.c
