@@ -23,7 +23,7 @@
 ////////////////////////////////////////////////////////////
 
 #include "../SFML/Network/Packet.hpp"
-#include "Socket.hpp"
+#include "../SFML/Network/Socket.hpp"
 #include <cstring>
 
 uint64_t htonll( uint64_t value ) {

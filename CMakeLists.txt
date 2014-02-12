@@ -17,5 +17,9 @@ foreach(ELEM ${DIRS})
     list(APPEND SRC ${FILES})
 endforeach(ELEM)
 
-add_executable(${NAME}.out ${SRC})
+add_library(${NAME} ${SRC})
+
 add_executable(VxWorksSFML_Example.out VxWorksSFML_Example.cpp)
+target_link_libraries(VxWorksSFML_Example.out ${NAME})
+
+add_executable(${NAME}.out ${SRC})

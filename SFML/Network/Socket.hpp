@@ -32,7 +32,7 @@
 #ifndef SFML_SOCKET_HPP
 #define SFML_SOCKET_HPP
 
-#include "../SFML/System/NonCopyable.hpp"
+#include "../System/NonCopyable.hpp"
 #include <vector>
 
 #include <sys/types.h>

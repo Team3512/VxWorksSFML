@@ -32,7 +32,7 @@
 #ifndef SFML_TCPSOCKET_HPP
 #define SFML_TCPSOCKET_HPP
 
-#include "../../SFMLNetwork/Socket.hpp"
+#include "Socket.hpp"
 #include "../System/Time.hpp"
 
 #include <types/vxTypes.h>

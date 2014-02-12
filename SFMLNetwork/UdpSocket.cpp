@@ -25,7 +25,6 @@
 #include "../SFML/Network/UdpSocket.hpp"
 #include "../SFML/Network/IpAddress.hpp"
 #include "../SFML/Network/Packet.hpp"
-#include "Socket.hpp"
 #include <algorithm>
 #include <iostream>
 

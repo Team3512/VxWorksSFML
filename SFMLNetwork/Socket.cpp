@@ -22,7 +22,7 @@
 //
 ////////////////////////////////////////////////////////////
 
-#include "Socket.hpp"
+#include "../SFML/Network/Socket.hpp"
 #include <cstring>
 #include <iostream>
 

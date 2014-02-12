@@ -32,7 +32,7 @@
 #ifndef SFML_UDPSOCKET_HPP
 #define SFML_UDPSOCKET_HPP
 
-#include "../../SFMLNetwork/Socket.hpp"
+#include "Socket.hpp"
 #include <vector>
 
 
