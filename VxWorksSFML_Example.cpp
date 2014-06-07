@@ -3,22 +3,30 @@
 #include "SFML/Network/UdpSocket.hpp"
 
 int main() {
-	sf::UdpSocket serverSocket;
-	unsigned short robotPort = 5614;
-	serverSocket.bind( robotPort ); // must bind before sending or receiving
-	sf::IpAddress robotIP( "10.35.12.2" );
+    sf::UdpSocket serverSocket;
+    unsigned short robotPort = 5614;
+    sf::IpAddress robotIP( 10 , 35 , 12 , 2 );
 
-	sf::Packet sendPacket;
-	float rotate = 0.f;
-	float distance = 0.f;
+    sf::Packet sendPacket;
+    float rotate = 0.f;
+    float distance = 0.f;
 
-	while ( 1 ) { // while program is running
-		/* get data to send */
+    serverSocket.bind( robotPort ); // must bind before sending or receiving
 
-		sendPacket.clear(); // clear packet before adding more data
-		sendPacket << rotate << distance;
-		serverSocket.send( sendPacket , robotIP , robotPort ); // it doesn't matter if the socket send fails so we won't check for error conditions like sf::Socket::Fail, sf::Socket::Disconnect, or sf::Socket::NotReady
-	}
+    while ( 1 ) { // while program is running
+        /* get data to send here */
 
-	return 0;
+        // clear packet before adding more data
+        sendPacket.clear();
+
+        sendPacket << rotate << distance;
+
+        /* it doesn't matter if the socket send fails so we won't check for
+         * error conditions like sf::Socket::Fail, sf::Socket::Disconnect, or
+         * sf::Socket::NotReady
+         */
+        serverSocket.send( sendPacket , robotIP , robotPort );
+    }
+
+    return 0;
 }
